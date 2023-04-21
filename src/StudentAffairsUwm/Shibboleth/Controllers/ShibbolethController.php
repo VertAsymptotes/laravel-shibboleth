@@ -81,10 +81,6 @@ class ShibbolethController extends Controller
             $map[$local] = $this->getServerVariable($server);
         }
 
-        if (empty($map['email'])) {
-            return abort(403, 'Unauthorized');
-        }
-
         $userClass = config('auth.providers.users.model', 'App\User');
 
         //Attempt to login with the specified field (email by default). If success, update the user model

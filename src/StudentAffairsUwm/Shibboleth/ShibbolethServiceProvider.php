@@ -18,7 +18,6 @@ class ShibbolethServiceProvider extends ServiceProvider
             __DIR__ . '/../../config/shibboleth.php' => config_path('shibboleth.php'),
         ]);
 
-        $this->loadRoutesFrom(__DIR__ . '/../../routes/shibboleth.php');
     }
 
     /**
